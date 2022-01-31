@@ -7,8 +7,13 @@ import json
 
 from Rank import Rank
 
+# Change secret and port
+SECRET='CHANGE YOUR SECRET'
+PORT=80
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'CHANGE YOUR SECRET'
+app.config['SECRET_KEY'] = SECRET
+
 @app.route('/')
 @app.route("/vs")
 @app.route("/vs/<won>/<lost>")
@@ -78,4 +83,4 @@ if __name__ == '__main__':
     if len(sys.argv) >= 2 and sys.argv[1] == 'dev':
         app.run(debug=True)
     else:
-        serve(app, host='0.0.0.0', port=80)
+        serve(app, host='0.0.0.0', port=PORT)
