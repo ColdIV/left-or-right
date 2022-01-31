@@ -38,7 +38,7 @@ def index(won = -1, lost = -1):
     bPath = data["data"][str(b)]['path']
     bID = str(b)
     
-    return render_template('versus.html', aPath=aPath, bPath=bPath, aID=aID, bID=bID)
+    return render_template('versus.html', aPath=aPath, bPath=bPath, aID=aID, bID=bID, active='versus')
 
 @app.route("/leaderboard")
 def leaderboard():
@@ -54,7 +54,7 @@ def leaderboard():
     for entry in leaderboard:
         ldb.append({'path': d[str(entry["id"])]['path'], 'points': d[str(entry["id"])]["points"]})
     
-    return render_template('leaderboard.html', ldb=ldb)
+    return render_template('leaderboard.html', ldb=ldb, active='leaderboard')
 
 if __name__ == '__main__':
     if os.path.isfile('json/data.json'):
