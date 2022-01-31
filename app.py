@@ -38,7 +38,7 @@ def index(won = -1, lost = -1):
     bPath = data["data"][str(b)]['path']
     bID = str(b)
     
-    return render_template('versus.html', aPath=aPath, bPath=bPath, aID=aID, bID=bID, active='versus')
+    return render_template('vote.html', aPath=aPath, bPath=bPath, aID=aID, bID=bID, active='vote')
 
 @app.route("/leaderboard")
 def leaderboard():
