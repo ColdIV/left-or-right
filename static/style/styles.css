@@ -1,7 +1,7 @@
 body {
-	background-color: #ccc;
+	background-color: #222;
 	background-size: cover;
-	color: #333;
+	color: #ccc;
 	margin: 0 auto;
 	text-align: center;
 	font-family: Verdana, sans-serif;
@@ -23,7 +23,7 @@ h2 {
     top: 0;
     position: sticky;
     padding: 1rem 2rem;
-    background: #ccc;
+    background: #333;
     z-index: 1;
 }
 
@@ -34,7 +34,7 @@ h2 {
 .header h1 a {
 	text-transform: capitalize;
 	text-decoration: none;
-	color: #333;
+	color: #ccc;
 }
 
 .header ul {
@@ -67,6 +67,7 @@ h2 {
 }
 
 .card {
+	color: #ccc;
 	position: relative;
 	display: inline-block;
 	margin: 15px;
@@ -74,9 +75,8 @@ h2 {
 	min-height: 200px;
 	height: auto;
 	padding: 15px;
-	border-radius: 8px;
-	box-shadow: 0 0 1px 1px #555;
-	background: rgb(255, 255, 255);
+	background: #333;
+	box-shadow: 0 0 1px 1px #111;
 }
 
 .card:hover {
