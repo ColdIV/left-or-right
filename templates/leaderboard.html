@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+	<h2>Leaderboard</h2>
+</div>
+
+<div>
+	{% for e in ldb: %}
+		<div class="card">
+			<img src="{{url_for('static', filename=e['path'])}}" alt="{{url_for('static', filename=e['path'])}}" style="width: 200px; height: 200px;">
+			
+			<hr>
+			<div>{{e['points']}}</div>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}

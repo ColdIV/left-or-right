@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+	<h2>Versus</h2>
+</div>
+
+<div>
+	<div class="card">
+		<a href="/vs/{{aID}}/{{bID}}" class="stretched-link"></a>
+		<img src="{{url_for('static', filename=aPath)}}" alt="{{aPath}}" style="width: 200px; height: 200px;">
+	</div>
+	
+	<div class="card">
+		<a href="/vs/{{bID}}/{{aID}}" class="stretched-link"></a>
+		<img src="{{url_for('static', filename=bPath)}}" alt="{{bPath}}" style="width: 200px; height: 200px;">
+	</div>
+</div>
+{% endblock %}
